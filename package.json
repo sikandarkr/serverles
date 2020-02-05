@@ -1,0 +1,34 @@
+{
+  "name": "giftiicon_user",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-offline": "^5.12.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.2.0",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "moment-timezone": "^0.5.26",
+    "mongoose": "^5.7.1",
+    "mongoose-timestamp": "^0.6.0",
+    "mongoose-unique-validator": "^2.0.3",
+    "onesignal-node": "^2.1.1",
+    "request": "^2.88.0",
+    "serverless-http": "^2.3.0",
+    "winston": "^3.2.1",
+    "winston-aws-cloudwatch": "^3.0.0"
+  }
+}

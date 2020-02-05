@@ -1,0 +1,28 @@
+service: giftiicon-user # NOTE: update this with your service name
+
+functions:
+  server:
+    handler: server.run
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'
+     
+            
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  memorySize: 512 # set the maximum memory of the Lambdas in Megabytes
+  timeout: 10 # the timeout is 10 seconds (default is 6 seconds)
+  stage: ${opt:stage, 'local'} # setting the env stage to dev, this will be visible in the routes
+  region: ap-south-1
+  environment:
+    DB: ${file(./config.${self:provider.stage}.json):DB}
+    STAGE: ${file(./config.${self:provider.stage}.json):environment}
+
+plugins:
+  - serverless-offline
+
+
+ 
+    
